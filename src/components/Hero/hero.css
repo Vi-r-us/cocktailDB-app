@@ -1,0 +1,31 @@
+.hero-section {
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+
+  .hero-image {
+    border-top-right-radius: 50vh;
+    border-radius: 5rem 50vh 50vh 5rem;
+    overflow: hidden;
+    box-shadow: 2px -2px 0px .5px var(--clr-orange);
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    .hero-title {
+      font-size: 10rem;
+    }
+  }
+}

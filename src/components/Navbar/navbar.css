@@ -1,0 +1,40 @@
+.navbar {
+  padding: 10px 1em;
+}
+.nav-center {
+  align-items: center;
+}
+.nav-links {
+  margin-inline: auto;
+  gap: 1rem;
+}
+.nav-links a {
+  text-transform: capitalize;
+  display: inline-block;
+  color: var(--clr-grey-300);
+  font-size: 1rem;
+  transition: var(--mainTransition);
+
+  &:hover {
+    color: var(--clr-orange);
+  }
+}
+
+.search-modal-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--clr-orange);
+  }
+}
+
+.logo {
+  margin-top: auto;
+  font-size: 1.75rem;
+
+  &:hover {
+    color: var(--clr-orange);
+  }
+}

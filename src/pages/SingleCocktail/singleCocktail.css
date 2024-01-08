@@ -1,0 +1,7 @@
+.cocktail-detail-page {
+  gap: 3em;
+
+  > a {
+    margin-right: auto ;
+  }
+}
