@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,400&display=swap');
 @font-face {
   font-family: Lovelace-Primary;
   src: url("./assets/fonts/Zetafonts\ -\ Lovelace\ Text\ Regular.otf");
@@ -85,6 +85,7 @@ a {
 }
 
 body {
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -96,6 +97,10 @@ body {
 main, header, footer {
   max-width: 70rem;
   margin-inline: auto;
+}
+
+main {
+  margin-block: auto;
 }
 
 code {

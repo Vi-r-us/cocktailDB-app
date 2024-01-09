@@ -1,0 +1,142 @@
+header,
+footer {
+  display: none;
+}
+
+.error-page {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  .wire-section {
+    display: flex;
+    justify-content: center;
+    opacity: 0.2;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    filter: brightness(0) saturate(100%) invert(78%) sepia(83%) saturate(1%)
+      hue-rotate(317deg) brightness(101%) contrast(99%);
+  }
+
+  .error-text-section {
+    position: relative;
+    text-align: center;
+    line-height: 1.25;
+    max-width: 35rem;
+    h1 {
+      font-family: var(--ff-montserrat);
+      font-weight: 600;
+      font-size: 3.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      margin-top: 14px;
+      font-size: 0.75rem;
+      font-weight: 400;
+    }
+    button {
+      margin-top: 30px;
+      border: none;
+      border-radius: 12px;
+      padding: 13px 34px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  }
+
+  .cross-img,
+  .circle-img {
+    position: absolute;
+    display: none;
+    opacity: 0.2;
+  }
+  .cross-img[image-size="large"] {
+    width: 63px;
+    height: 70.606px;
+    right: 20px;
+    bottom: -70px;
+  }
+  .cross-img[image-size="medium"] {
+    width: 47.194px;
+    height: 52.892px;
+    top: -40px;
+    left: 135px;
+  }
+  .cross-img[image-size="small"] {
+    width: 21px;
+    height: 23.535px;
+    top: 115px;
+    left: 60px;
+  }
+
+  .circle-img[image-size="large"] {
+    width: 82.037px;
+    height: 82.037px;
+    top: -150px;
+    right: 0px;
+  }
+  .circle-img[image-size="medium"] {
+    width: 63.019px;
+    height: 63.019px;
+    bottom: -120px;
+    left: 0px;
+  }
+  .circle-img[image-size="small"] {
+    width: 28.965px;
+    height: 28.965px;
+    top: 50px;
+    right: 90px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 426px) {
+  .error-page {
+    .wire-section {
+      justify-content: start;
+    }
+
+    .error-text-section {
+      h1 {
+        font-size: 7rem;
+      }
+      h2 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+      button {
+        font-size: 1.25rem;
+      }
+    }
+
+    .cross-img,
+    .circle-img {
+      display: block;
+    }
+  }
+}
+@media (min-width: 580px) {
+  .error-page {
+    .cross-img,
+    .circle-img {
+      opacity: 1;
+    }
+  }
+}
+/* Desktop */
+@media (min-width: 1024px) {
+  .error-page .wire-section {
+    opacity: 1;
+  }
+}
