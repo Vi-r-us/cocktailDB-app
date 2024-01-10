@@ -1,8 +1,3 @@
-header,
-footer {
-  display: none;
-}
-
 .error-page {
   min-height: 100vh;
   display: grid;

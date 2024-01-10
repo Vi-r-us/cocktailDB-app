@@ -11,16 +11,50 @@ import Error from "./pages/Error";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/cocktail/:cocktailId" element={<SingleCocktail />} />
+        <Route
+          path="/"
+          element={
+            <Redirect>
+              <Home />
+            </Redirect>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Redirect>
+              <About />
+            </Redirect>
+          }
+        />
+        <Route
+          path="/search"
+          element={
+            <Redirect>
+              <Search />
+            </Redirect>
+          }
+        />
+        <Route
+          path="/cocktail/:cocktailId"
+          element={
+            <Redirect>
+              <SingleCocktail />
+            </Redirect>
+          }
+        />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
 }
+
+const Redirect = ({ children }) => (
+  <>
+    <Navbar />
+    {children}
+  </>
+);
 
 export default App;

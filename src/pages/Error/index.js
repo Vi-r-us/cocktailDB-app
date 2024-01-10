@@ -3,6 +3,7 @@ import "./error.css";
 import plugImage from "../../assets/rotated-plug.png";
 import CrossImage from "../../assets/cross.svg";
 import CircleImage from "../../assets/circle.svg";
+import { Link } from "react-router-dom";
 
 const Error = () => {
   return (
@@ -18,7 +19,9 @@ const Error = () => {
           we’re sorry. the page you requested could no be found Please go back
           to the home page
         </p>
-        <button>Go Home</button>
+        <Link to={"/"}>
+          <button>Go Home</button>
+        </Link>
 
         <img className="cross-img" image-size="small" src={CrossImage} alt="" />
         <img
@@ -27,12 +30,7 @@ const Error = () => {
           src={CrossImage}
           alt=""
         />
-        <img
-          className="cross-img"
-          image-size="large"
-          src={CrossImage}
-          alt=""
-        />
+        <img className="cross-img" image-size="large" src={CrossImage} alt="" />
 
         <img
           className="circle-img"
