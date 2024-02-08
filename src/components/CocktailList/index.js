@@ -16,7 +16,7 @@ const CocktailList = () => {
           return (
             <article className="cocktail flex" direction="col" key={idDrink}>
               <Link to={`/cocktail/${idDrink}`}>
-                <div className={imageStyle}>
+                <div className={`${imageStyle} image-wrapper`} >
                   <img src={strDrinkThumb} alt="Drink Thumbnail" />
                 </div>
               </Link>

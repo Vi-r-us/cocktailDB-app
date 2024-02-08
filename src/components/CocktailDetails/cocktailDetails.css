@@ -9,6 +9,7 @@
     "ingredients"
     "method";
   gap: 2em;
+  grid-auto-rows: min-content;
 
   h1 {
     font-size: 3rem;
@@ -32,7 +33,7 @@
     grid-area: title;
 
     .cocktail-tags {
-      margin-top: .5em;
+      margin-top: 0.5em;
       gap: 0.5em;
       flex-wrap: wrap;
 
@@ -44,7 +45,7 @@
       > li {
         border: 1px solid currentColor;
         border-radius: 50vh;
-        padding-inline: .9em;
+        padding-inline: 0.9em;
       }
     }
   }
@@ -57,8 +58,8 @@
   .cocktail-ingredients {
     max-width: 25rem;
     grid-area: ingredients;
-    grid-template-columns: 1fr 1.25fr;
-    grid-template-rows: min-content min-content min-content;
+    /* grid-template-columns: 1fr 1.25fr; */
+    /* grid-template-rows: min-content min-content min-content; */
     .ingredient {
       span {
         margin-inline: 5px;
@@ -81,10 +82,15 @@
 @media (min-width: 768px) {
   .cocktail-detail-section {
     grid-template-columns: 0.9fr 1fr;
+    grid-template-rows: auto auto 1fr;
     grid-template-areas:
       "image title"
       "image ingredients"
       "image method";
+
+    /* div {
+      align-self: start;
+    } */
 
     .cocktail-image {
       aspect-ratio: 1 / 1;
